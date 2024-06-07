@@ -37,6 +37,12 @@ window.onload = () => {
  
         let cell4= row.insertCell();
         cell4.innerHTML = users[i].email
+
+        let cell5= row.insertCell();
+        cell5.innerHTML = users[i].address.city
+
+        let cell6= row.insertCell();
+        cell6.innerHTML = users[i].website
  
    }
  
