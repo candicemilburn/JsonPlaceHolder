@@ -33,10 +33,8 @@ const createAComment = async (event) => {
         const theResultsDiv = document.getElementById("theResults");
         theResultsDiv.innerHTML = `
             <p>User ID: ${newComment.userId}</p>
-            <p>ID: ${newComment.id}</p>
-            <p>Comment: ${newComment.title}</p>
+            <p>Title: ${newComment.title}</p>
             <p>Completed?: ${newComment.completed}</p>
-          
             <p>Your message has posted.</p>
         `
         console.log(newComment);
