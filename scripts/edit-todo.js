@@ -1,19 +1,17 @@
 "use strict"
-
+//shouldve changes all comments to TODO 
 window.onload = () => {
-
-    console.log("uh")
 
     const getCommentForm = document.querySelector("#getToDoToEdit");
 
     getCommentForm.addEventListener("submit", populateUpdateForm);
 
     const updateCommentForm = document.querySelector("#updateCommentForm");
-
+//--------------------------------------------------------------------------//
     updateCommentForm.addEventListener("submit", updateATodo);
 
     const cancelButton = document.querySelector("#cancelButton");
-
+//-------------------------------------------------------------------------//
     cancelButton.addEventListener("click", () => {
         window.location.href = "index.html"
     })
@@ -50,7 +48,6 @@ const updateATodo = async (event) => {
                 headers: { "Content-type": "application/json; charset=UTF-8" },
                 body: JSON.stringify({
                     userId: event.target.userId.value,
-                    id: event.target.id.value,
                     title: event.target.title.value,
                     completed: event.target.completed.value
 
@@ -68,6 +65,6 @@ const updateATodo = async (event) => {
         console.log(updatedComment);
 
     } catch (error) {
-        console.log("something went wrong! fix me pls!", error)
+        console.log("something went south.", error)
     }
 }
